@@ -1,99 +1,48 @@
 body {
+    margin: 0;
+}
+
+header {
+    padding: 16px;
     background-color: bisque;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
-    font-size: 1.5vw;
+    color: #a9a9e0;
+    text-align: centre;
+    grid-area: header;
 }
 
-
-#logo {
-    margin: 0px;
-    padding: 8px;
-    font-family: "Fredoka One", sans-serif;
+#menu {
+    text-align: center;
+    padding: 32px;
+    background-color: darkgoldenrod ;
+    grid-area: menu;
 }
 
-ul {
-    margin: 0px;
-}
-
-body > header {
-    background-color: #a9a9e0;
-    color: black
-}
-
-#main-header {
+nav {
+    margin-top: 28px;
     display: flex;
-    height: 15vh;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#nav-ul{
-    display: flex;
-}
-
-#nav-ul > li {
-        padding: 8px;
-        margin: 16px;
-}
-body > header > nav > ul {
-    list-style: none;
-    text-decoration: none;
-}
-.navbutton {
-        color: white;
-        text-decoration: none;
-        padding: 12px;
-        border: 1px solid white;
-        border-radius: 100%;
-}
-
-.nav-button{
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    display: flex;
-}
-
-#footer-ul {
-    display: flex;
-    list-style: none;
-}
-
-#footer-ul> div > li a{
-    align-items: center;
-    margin: 12px;
-    text-decoration: none;
-    color: white;
-}
-body > main article {
-    width: 70%;
-    margin: auto;
+    align-items: centre;
+    flex-flow:column ;
 }
 
 #main-content {
-    display: flex;
-    justify-content: space space-around;
+    padding: 32px;
+    grid-area: main;
 }
 
- form {
+footer {
+    grid-area: footer;
     text-align: center;
+    padding: 16px;
+    background-color: orange;
+    color:white
 }
 
-h2 {
-    text-align: center;
-}
-    
-
-body > footer {
-    background-color: #a9a9e0;
-    color: white
-}
-
-img {
-    border-radius: 100%;
-}
-
-#category {
-     align-items: baseline;
+#grid-container {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "menu main"
+    "footer footer"
+    ;
+    grid-template-columns: 3fr 73fr;
 }
